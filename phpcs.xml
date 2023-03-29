@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PHP_CodeSniffer"
+         xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+    <description>The coding standard for PHP_CodeSniffer itself.</description>
+
+    <config name="installed_paths" value="vendor/phpcompatibility/php-compatibility,devlib/phpcs"/>
+
+    <autoload>vendor/phpcompatibility/php-compatibility/PHPCSAliases.php</autoload>
+
+    <config name="testVersion" value="8.0-"/>
+
+    <arg name="extensions" value="php"/>
+    <arg value="ps"/>
+    <arg value="vv"/>
+
+    <arg name="basepath" value="."/>
+    <arg name="colors"/>
+    <arg name="parallel" value="75"/>
+
+    <file>src</file>
+
+    <!-- Removed for PHPCompatibility analysis -->
+    <!--    <rule ref="PSR12"/> -->
+
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <severity>0</severity>
+    </rule>
+    <rule ref="PSR1.Classes.ClassDeclaration">
+        <type>warning</type>
+    </rule>
+    <rule ref="PSR1.Methods.CamelCapsMethodName">
+        <severity>0</severity>
+    </rule>
+    <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
+        <type>warning</type>
+    </rule>
+    <rule ref="Squiz.Classes.ValidClassName">
+        <type>warning</type>
+    </rule>
+
+    <!--    <rule ref="EprocurementCS.Deprecation.DeprecateSfConfigGet">-->
+    <!--        <type>warning</type>-->
+    <!--    </rule>-->
+
+    <rule ref="PHPCompatibility.Attributes">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Classes">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Constants">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.ControlStructures">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Extensions">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.FunctionDeclarations">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.FunctionNameRestrictions">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.FunctionUse">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Generators">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.IniDirectives">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.InitialValue">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Interfaces">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Keywords">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.LanguageConstructs">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Lists">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.MethodUse">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Miscellaneous">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Namespaces">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Numbers">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Operators">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.ParameterValues">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Syntax">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.TextStrings">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.TypeCasts">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Upgrade">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.UseDeclarations">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PHPCompatibility.Variables">
+        <type>error</type>
+    </rule>
+
+</ruleset>
