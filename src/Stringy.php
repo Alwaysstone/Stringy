@@ -267,7 +267,7 @@ class Stringy implements Countable, IteratorAggregate, ArrayAccess
      *
      * @return int The number of characters in the string, given the encoding
      */
-    public function count()
+    public function count(): int
     {
         return $this->length();
     }
@@ -450,7 +450,7 @@ class Stringy implements Countable, IteratorAggregate, ArrayAccess
      *
      * @return \ArrayIterator An iterator for the characters in the string
      */
-    public function getIterator()
+    public function getIterator(): ArrayIterator
     {
         return new ArrayIterator($this->chars());
     }
@@ -847,7 +847,7 @@ class Stringy implements Countable, IteratorAggregate, ArrayAccess
      * @param  mixed   $offset The index to check
      * @return boolean Whether or not the index exists
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         $length = $this->length();
         $offset = (int) $offset;
@@ -870,7 +870,7 @@ class Stringy implements Countable, IteratorAggregate, ArrayAccess
      * @throws \OutOfBoundsException If the positive or negative offset does
      *                               not exist
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         $offset = (int) $offset;
         $length = $this->length();
@@ -890,7 +890,7 @@ class Stringy implements Countable, IteratorAggregate, ArrayAccess
      * @param  mixed      $value  Value to set
      * @throws \Exception When called
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         // Stringy is immutable, cannot directly set char
         throw new Exception('Stringy object is immutable, cannot modify char');
@@ -903,7 +903,7 @@ class Stringy implements Countable, IteratorAggregate, ArrayAccess
      * @param  mixed      $offset The index of the character
      * @throws \Exception When called
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         // Don't allow directly modifying the string
         throw new Exception('Stringy object is immutable, cannot unset char');
